@@ -1,4 +1,4 @@
-import { chromium } from '@playwright/test';
+import { firefox } from '@playwright/test';
 import { build } from 'esbuild';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
@@ -13,7 +13,7 @@ const assert_file = path.resolve(__dirname, 'assert.js');
 let browser: import('@playwright/test').Browser;
 
 beforeAll(async () => {
-	browser = await chromium.launch();
+	browser = await firefox.launch();
 }, 20000);
 
 afterAll(async () => {
